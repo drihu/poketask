@@ -9,6 +9,10 @@
     "install": "git clone https://github.com/github/gitignore.git",
     "lint:init": "eslint --init"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drihu/poketask.git"
+  },
   "author": "Ricardo Huamani <ricardohuamanip@gmail.com>",
   "license": "MIT",
   "dependencies": {
