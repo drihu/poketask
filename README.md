@@ -1,5 +1,5 @@
 # Poketask
-> A simple command to start any project
+> A simple command to start any project. Create a README.md, LICENSE, .gitignore, .gitattributes and .editorconfig with one command line.
 
 ## Installation
 ```bash
