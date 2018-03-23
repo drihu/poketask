@@ -6,7 +6,7 @@
     "poketask": "index.js"
   },
   "scripts": {
-    "install": "git clone https://github.com/github/gitignore.git",
+    "install": "rm -rf gitignore; git clone https://github.com/github/gitignore.git",
     "lint:init": "eslint --init"
   },
   "repository": {
