@@ -19,10 +19,13 @@ program
     co(function* init() {
       console.log('With poketask you\'ll be able to generate the following files:');
       console.log('README.md, LICENSE, .gitignore, .gitattributes & .editorconfig');
+
       const project = yield prompt('package name: ');
       const description = yield prompt('description: ');
       const author = yield prompt('author name: ');
       const gitignore = utils.firstLetterToUpperCase(yield prompt('gitignore: '));
+
+      console.log('--');
 
       fs.copyFile(
         path.join(__dirname, 'resources/.editorconfig'),
