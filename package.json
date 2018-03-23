@@ -1,0 +1,25 @@
+{
+  "name": "poketask",
+  "version": "0.1.0",
+  "description": "A simple command to start any project",
+  "bin": {
+    "poketask": "index.js"
+  },
+  "scripts": {
+    "install": "git clone https://github.com/github/gitignore.git",
+    "lint:init": "eslint --init"
+  },
+  "author": "Ricardo Huamani <ricardohuamanip@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.15.1",
+    "ejs": "^2.5.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
