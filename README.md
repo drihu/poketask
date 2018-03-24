@@ -16,7 +16,7 @@ Example
 package name: my-package
 description: description here
 author: Pablo Marmol
-gitignore: node laravel
+gitignore workspace: node laravel
 ```
 It accepts multiple gitignore workspaces. It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore).
 
