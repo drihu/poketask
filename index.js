@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 const fs = require('fs');
 const path = require('path');
@@ -11,22 +12,50 @@ const utils = require('./utils');
 const location = process.cwd();
 
 program
-  .version('0.1.0');
+  .version('0.2.0');
 
 program
   .command('init')
+  .description('create a README.md, LICENSE, .gitignore, .gitattributes & .editorconfig')
   .action(() => {
     co(function* init() {
       console.log('With poketask you\'ll be able to generate the following files:');
       console.log('README.md, LICENSE, .gitignore, .gitattributes & .editorconfig');
+      console.log('\nPress ^C at any time to quit.');
 
       const project = yield prompt('package name: ');
       const description = yield prompt('description: ');
       const author = yield prompt('author name: ');
-      const gitignore = utils.firstLetterToUpperCase(yield prompt('gitignore: '));
+      const keywords = utils.toArrayOfWords(yield prompt('gitignore: '));
 
       console.log('--');
 
+      // Generate .gitignore
+      fs.readdir(path.join(__dirname, 'gitignore'), (err, files) => {
+        if (err) throw err;
+
+        const gitignore = path.join(location, '.gitignore');
+        fs.writeFileSync(gitignore, '');
+
+        keywords.forEach((keyword) => {
+          const keywordRegExp = utils.toRegExp(`${keyword}.gitignore`);
+
+          files.forEach((file) => {
+            if (keywordRegExp.test(file)) {
+              const filePlace = path.join(__dirname, `gitignore/${file}`);
+              const fileData = fs.readFileSync(filePlace, 'utf8');
+
+              fs.appendFile(gitignore, fileData, (er) => {
+                if (er) throw er;
+              });
+            }
+          });
+        });
+
+        console.log('.gitignore created');
+      });
+
+      // Generate .editorconfig
       fs.copyFile(
         path.join(__dirname, 'resources/.editorconfig'),
         path.join(location, '.editorconfig'),
@@ -36,6 +65,7 @@ program
         },
       );
 
+      // Generate .gitattributes
       fs.copyFile(
         path.join(__dirname, 'resources/.gitattributes'),
         path.join(location, '.gitattributes'),
@@ -45,15 +75,7 @@ program
         },
       );
 
-      fs.copyFile(
-        path.join(__dirname, `gitignore/${gitignore}.gitignore`),
-        path.join(location, '.gitignore'),
-        (err) => {
-          if (err) throw err;
-          console.log('.gitignore created');
-        },
-      );
-
+      // Generate LICENSE
       fs.readFile(
         path.join(__dirname, 'resources/LICENSE.ejs'),
         'utf8',
@@ -67,6 +89,7 @@ program
         },
       );
 
+      // Generate README.md
       fs.readFile(
         path.join(__dirname, 'resources/README.ejs'),
         'utf8',
