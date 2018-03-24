@@ -13,12 +13,12 @@ poketask init
 ```
 Example
 ```bash
-package name: poketask
+package name: my-package
 description: description here
 author: Pablo Marmol
-gitignore: node
+gitignore: node laravel
 ```
-It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore).
+It accepts multiple gitignore workspaces. It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore).
 
 ## License
 MIT &copy; Ricardo Huamani

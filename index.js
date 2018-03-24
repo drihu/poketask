@@ -26,7 +26,7 @@ program
       const project = yield prompt('package name: ');
       const description = yield prompt('description: ');
       const author = yield prompt('author name: ');
-      const keywords = utils.toArrayOfWords(yield prompt('gitignore: '));
+      const keywords = utils.toArrayOfWords(yield prompt('gitignore workspace: '));
 
       console.log('--');
 
