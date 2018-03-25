@@ -10,9 +10,10 @@ const prompt = require('co-prompt');
 const utils = require('./utils');
 
 const location = process.cwd();
+const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
 
 program
-  .version('0.2.1');
+  .version('0.2.2');
 
 program
   .command('init')
@@ -23,9 +24,18 @@ program
       console.log('README.md, LICENSE, .gitignore, .gitattributes & .editorconfig');
       console.log('\nPress ^C at any time to quit.');
 
-      const project = yield prompt('package name: ');
-      const description = yield prompt('description: ');
-      const author = yield prompt('author name: ');
+      const name = packageObj.name
+        ? (yield prompt(`package name: (${packageObj.name}) `)) || packageObj.name
+        : yield prompt('package name: ');
+
+      const description = packageObj.description
+        ? (yield prompt(`description: (${packageObj.description})`)) || packageObj.description
+        : yield prompt('description: ');
+
+      const author = packageObj.author
+        ? (yield prompt(`author name: (${packageObj.author})`)) || packageObj.author
+        : yield prompt('author name: ');
+
       const keywords = utils.toArrayOfWords(yield prompt('gitignore workspace: '));
 
       console.log('--');
@@ -95,7 +105,7 @@ program
         'utf8',
         (err, data) => {
           if (err) throw err;
-          const newData = ejs.render(data, { project, description, author });
+          const newData = ejs.render(data, { name, description, author });
           fs.writeFile(path.join(location, 'README.md'), newData, (e) => {
             if (e) throw e;
             console.log('README.md created');

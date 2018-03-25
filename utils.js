@@ -1,3 +1,20 @@
+const fs = require('fs');
+
+/**
+ * Return an object after parsing a JSON file. If the
+ * file doesn't exist, it returns an empty object
+ * @param {String} file
+ * @return {Object}
+ */
+function jsonFileToObj(file) {
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (err) {
+    if (err.code === 'ENOENT') return {};
+    throw err;
+  }
+}
+
 /**
  * Return an array with each word from the string
  * and all their letters become uppercase
@@ -25,6 +42,7 @@ function toRegExp(string) {
 }
 
 module.exports = {
+  jsonFileToObj,
   toArrayOfWords,
   toRegExp,
 };
