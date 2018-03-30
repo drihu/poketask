@@ -9,7 +9,7 @@ npm install -g poketask
 ```
 
 ## Usage
-In your project's root folder. It will create a README.md, LICENSE, .gitignore, .gitattributes and .editorconfig
+In your project's root folder. Recommended after doing npm init. It will create a README.md, LICENSE, .gitignore, .gitattributes and .editorconfig
 ```bash
 poketask init
 ```
@@ -21,7 +21,9 @@ author: Pablo Marmol
 license: mit
 gitignore workspace: node laravel
 ```
-It accepts multiple gitignore workspaces and license templates. It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore). And the list of license templates [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
+It accepts multiple gitignore workspaces and license templates. It uses the github gitignore templates. You can see the list of gitignore templates [here](https://github.com/github/gitignore). And the list of license templates [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
 
 ## License
-MIT &copy; Ricardo Huamani
+Copyright &copy; 2018 Ricardo Huamani
+
+Licensed under the terms of the MIT license.
