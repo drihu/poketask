@@ -1,4 +1,22 @@
+/* eslint-disable no-console */
 const fs = require('fs');
+const path = require('path');
+
+/**
+ * Copy a file from src to dest
+ * @param {String} src
+ * @param {String} dest
+ */
+function copyFile(src, dest) {
+  try {
+    fs.createReadStream(src)
+      .pipe(fs.createWriteStream(dest).on('finish', () => {
+        console.log(`${path.basename(dest)} created`);
+      }));
+  } catch (err) {
+    throw err;
+  }
+}
 
 /**
  * Return an object after parsing a JSON file. If the
@@ -42,6 +60,7 @@ function toRegExp(string) {
 }
 
 module.exports = {
+  copyFile,
   jsonFileToObj,
   toArrayOfWords,
   toRegExp,

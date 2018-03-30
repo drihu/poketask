@@ -55,8 +55,8 @@ program
               const filePlace = path.join(__dirname, `gitignore/${file}`);
               const fileData = fs.readFileSync(filePlace, 'utf8');
 
-              fs.appendFile(gitignore, fileData, (er) => {
-                if (er) throw er;
+              fs.appendFile(gitignore, fileData, (e) => {
+                if (e) throw e;
               });
             }
           });
@@ -66,23 +66,15 @@ program
       });
 
       // Generate .editorconfig
-      fs.copyFile(
+      utils.copyFile(
         path.join(__dirname, 'resources/.editorconfig'),
         path.join(location, '.editorconfig'),
-        (err) => {
-          if (err) throw err;
-          console.log('.editorconfig created');
-        },
       );
 
       // Generate .gitattributes
-      fs.copyFile(
+      utils.copyFile(
         path.join(__dirname, 'resources/.gitattributes'),
         path.join(location, '.gitattributes'),
-        (err) => {
-          if (err) throw err;
-          console.log('.gitattributes created');
-        },
       );
 
       // Generate LICENSE
