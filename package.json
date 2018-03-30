@@ -1,6 +1,6 @@
 {
   "name": "poketask",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A simple command to start any project",
   "bin": {
     "poketask": "index.js"
