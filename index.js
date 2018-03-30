@@ -13,7 +13,7 @@ const location = process.cwd();
 const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
 
 program
-  .version('0.2.4');
+  .version('0.3.0');
 
 program
   .command('init')
@@ -29,12 +29,16 @@ program
         : yield prompt('package name: ');
 
       const description = packageObj.description
-        ? (yield prompt(`description: (${packageObj.description})`)) || packageObj.description
+        ? (yield prompt(`description: (${packageObj.description}) `)) || packageObj.description
         : yield prompt('description: ');
 
       const author = packageObj.author
-        ? (yield prompt(`author name: (${packageObj.author})`)) || packageObj.author
+        ? (yield prompt(`author name: (${packageObj.author}) `)) || packageObj.author
         : yield prompt('author name: ');
+
+      const license = packageObj.license
+        ? (yield prompt(`license: (${packageObj.license}) `)) || packageObj.license
+        : yield prompt('license: ');
 
       const keywords = utils.toArrayOfWords(yield prompt('gitignore workspace: '));
 
@@ -78,18 +82,25 @@ program
       );
 
       // Generate LICENSE
-      fs.readFile(
-        path.join(__dirname, 'resources/LICENSE.ejs'),
-        'utf8',
-        (err, data) => {
-          if (err) throw err;
-          const newData = ejs.render(data, { author });
-          fs.writeFile(path.join(location, 'LICENSE'), newData, (e) => {
-            if (e) throw e;
-            console.log('LICENSE created');
-          });
-        },
-      );
+      fs.readdir(path.join(__dirname, 'choosealicense.com/_licenses'), (err, files) => {
+        if (err) throw err;
+        const licenseRegExp = utils.toRegExp(`${license}.txt`);
+
+        files.forEach((file) => {
+          if (licenseRegExp.test(file)) {
+            const licensePlace = path.join(__dirname, `choosealicense.com/_licenses/${file}`);
+            const licenseData = fs.readFileSync(licensePlace, 'utf8')
+              .replace(/^---[\s\S]*---\n\n/gi, '')
+              .replace(/\[year\]/gi, '2018')
+              .replace(/\[fullname\]/gi, author);
+
+            fs.writeFile(path.join(location, 'LICENSE'), licenseData, (e) => {
+              if (e) throw e;
+              console.log('LICENSE created');
+            });
+          }
+        });
+      });
 
       // Generate README.md
       fs.readFile(

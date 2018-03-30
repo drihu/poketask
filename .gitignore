@@ -1,6 +1,9 @@
 # Github gitignore templates
 gitignore
 
+# Github license templates
+choosealicense.com
+
 # Logs
 logs
 *.log

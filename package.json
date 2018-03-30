@@ -6,8 +6,11 @@
     "poketask": "index.js"
   },
   "scripts": {
-    "install": "rm -rf gitignore; git clone https://github.com/github/gitignore.git",
-    "lint:init": "eslint --init"
+    "clone:git": "git clone https://github.com/github/gitignore.git",
+    "clone:lic": "git clone https://github.com/github/choosealicense.com.git",
+    "install": "remove; clone:git; clone:lic",
+    "lint:init": "eslint --init",
+    "remove": "rm -rf gitignore choosealicense.com"
   },
   "repository": {
     "type": "git",
