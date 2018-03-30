@@ -13,7 +13,7 @@ const location = process.cwd();
 const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
 
 program
-  .version('0.3.1');
+  .version('0.3.2');
 
 program
   .command('init')
@@ -108,7 +108,13 @@ program
         'utf8',
         (err, data) => {
           if (err) throw err;
-          const newData = ejs.render(data, { name, description, author });
+          const newData = ejs.render(data, {
+            name,
+            description,
+            author,
+            year: new Date().getFullYear(),
+            license: license.toUpperCase(),
+          });
           fs.writeFile(path.join(location, 'README.md'), newData, (e) => {
             if (e) throw e;
             console.log('README.md created');
