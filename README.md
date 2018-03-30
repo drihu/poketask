@@ -18,9 +18,10 @@ Example
 package name: my-package
 description: description here
 author: Pablo Marmol
+license: mit
 gitignore workspace: node laravel
 ```
-It accepts multiple gitignore workspaces. It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore).
+It accepts multiple gitignore workspaces and license templates. It uses the github gitignore templates. You can see the list of options [here](https://github.com/github/gitignore). And the list of license templates [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
 
 ## License
 MIT &copy; Ricardo Huamani
