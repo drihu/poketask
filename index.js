@@ -13,7 +13,7 @@ const location = process.cwd();
 const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
 
 program
-  .version('0.3.0');
+  .version('0.3.1');
 
 program
   .command('init')
@@ -91,7 +91,7 @@ program
             const licensePlace = path.join(__dirname, `choosealicense.com/_licenses/${file}`);
             const licenseData = fs.readFileSync(licensePlace, 'utf8')
               .replace(/^---[\s\S]*---\n\n/gi, '')
-              .replace(/\[year\]/gi, '2018')
+              .replace(/\[year\]/gi, new Date().getFullYear())
               .replace(/\[fullname\]/gi, author);
 
             fs.writeFile(path.join(location, 'LICENSE'), licenseData, (e) => {
