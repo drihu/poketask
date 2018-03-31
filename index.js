@@ -13,7 +13,7 @@ const location = process.cwd();
 const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
 
 program
-  .version('0.3.2');
+  .version('0.3.3');
 
 program
   .command('init')
