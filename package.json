@@ -8,7 +8,7 @@
   "scripts": {
     "clone:git": "git clone https://github.com/github/gitignore.git",
     "clone:lic": "git clone https://github.com/github/choosealicense.com.git",
-    "install": "remove; clone:git; clone:lic",
+    "install": "npm run remove; npm run clone:git; npm run clone:lic",
     "lint:init": "eslint --init",
     "remove": "rm -rf gitignore choosealicense.com"
   },
