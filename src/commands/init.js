@@ -7,7 +7,7 @@ const prompt = require('co-prompt');
 const utils = require('../utils');
 
 const userLocation = process.cwd();
-const packageObj = utils.jsonFileToObj(path.join(userLocation, 'package.json'));
+const packageObj = utils.fromJsonFileToObj(path.join(userLocation, 'package.json'));
 const assetsFolder = path.join(__dirname, '../../assets');
 const gitignoreTemplatesFolder = path.join(__dirname, '../../gitignore');
 const licenseTemplatesFolder = path.join(__dirname, '../../choosealicense.com/_licenses');

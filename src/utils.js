@@ -24,7 +24,7 @@ function copyFile(src, dest) {
  * @param {String} file
  * @return {Object}
  */
-function jsonFileToObj(file) {
+function fromJsonFileToObj(file) {
   try {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
   } catch (err) {
@@ -61,7 +61,7 @@ function toRegExp(string) {
 
 module.exports = {
   copyFile,
-  jsonFileToObj,
+  fromJsonFileToObj,
   toArrayOfWords,
   toRegExp,
 };
