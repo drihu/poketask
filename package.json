@@ -3,7 +3,7 @@
   "version": "0.3.3",
   "description": "A simple command to start any project",
   "bin": {
-    "poketask": "index.js"
+    "poketask": "./src/index.js"
   },
   "scripts": {
     "clone:git": "git clone https://github.com/github/gitignore.git",
