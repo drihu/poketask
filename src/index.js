@@ -5,5 +5,6 @@ program
   .version('0.3.3', '-v, --version');
 
 require('./commands/init')(program);
+require('./commands/gi')(program);
 
 program.parse(process.argv);
