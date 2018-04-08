@@ -55,7 +55,7 @@ function toArrayOfWords(string) {
 function toRegExp(string) {
   return new RegExp(
     `^${string.replace(/\+/g, '\\+').replace(/-/g, '\\-')}$`,
-    'gi',
+    'i',
   );
 }
 
