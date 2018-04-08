@@ -6,7 +6,7 @@ const co = require('co');
 const ejs = require('ejs');
 const program = require('commander');
 const prompt = require('co-prompt');
-const utils = require('../utils');
+const utils = require('./utils');
 
 const location = process.cwd();
 const packageObj = utils.jsonFileToObj(path.join(location, 'package.json'));
