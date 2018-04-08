@@ -7,7 +7,7 @@ const prompt = require('co-prompt');
 const utils = require('../utils');
 
 const userLocation = process.cwd();
-const packageObj = utils.fromJsonFileToObj(path.join(userLocation, 'package.json'));
+const userPackage = utils.fromJsonFileToObj(path.join(userLocation, 'package.json'));
 const assetsFolder = path.join(__dirname, '../../assets');
 const gitignoreTemplatesFolder = path.join(__dirname, '../../gitignore');
 const licenseTemplatesFolder = path.join(__dirname, '../../choosealicense.com/_licenses');
@@ -22,20 +22,20 @@ function commandInit(program) {
         console.log('README.md, LICENSE, .gitignore, .gitattributes & .editorconfig');
         console.log('\nPress ^C at any time to quit.');
 
-        const name = packageObj.name
-          ? (yield prompt(`package name: (${packageObj.name}) `)) || packageObj.name
+        const name = userPackage.name
+          ? (yield prompt(`package name: (${userPackage.name}) `)) || userPackage.name
           : yield prompt('package name: ');
 
-        const description = packageObj.description
-          ? (yield prompt(`description: (${packageObj.description}) `)) || packageObj.description
+        const description = userPackage.description
+          ? (yield prompt(`description: (${userPackage.description}) `)) || userPackage.description
           : yield prompt('description: ');
 
-        const author = packageObj.author
-          ? (yield prompt(`author name: (${packageObj.author}) `)) || packageObj.author
+        const author = userPackage.author
+          ? (yield prompt(`author name: (${userPackage.author}) `)) || userPackage.author
           : yield prompt('author name: ');
 
-        const license = packageObj.license
-          ? (yield prompt(`license: (${packageObj.license}) `)) || packageObj.license
+        const license = userPackage.license
+          ? (yield prompt(`license: (${userPackage.license}) `)) || userPackage.license
           : yield prompt('license: ');
 
         const gitkeywords = utils.toArrayOfWords(yield prompt('gitignore template: '));
