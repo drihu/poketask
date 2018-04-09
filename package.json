@@ -3,7 +3,7 @@
   "version": "0.3.3",
   "description": "A simple command to start any project",
   "bin": {
-    "poketask": "./src/index.js"
+    "poketask": "./lib/poketask.js"
   },
   "scripts": {
     "clone:git": "git clone https://github.com/github/gitignore.git",
@@ -26,10 +26,9 @@
   "author": "Ricardo Huamani <ricardohuamanip@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "co": "^4.6.0",
-    "co-prompt": "^1.0.0",
     "commander": "^2.15.1",
-    "ejs": "^2.5.7"
+    "ejs": "^2.5.7",
+    "inquirer": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
