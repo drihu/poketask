@@ -1,7 +1,7 @@
 # Poketask
 > A simple command to start any project. Run the command to create a README.md, LICENSE, .gitignore, .gitattributes, and .editorconfig with a one-line command.
 
-Currently, it is compatible with older Node versions.
+Currently, it is compatible with Node >= 4.9.1
 
 ## Installation
 ```bash
