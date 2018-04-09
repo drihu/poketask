@@ -1,5 +1,4 @@
 # Poketask
-[![node](https://img.shields.io/badge/node-%3E%3D%20v8.0.0-green.svg)]()
 [![license](https://img.shields.io/badge/license-MIT-green.svg)]()
 
 > A simple command to start any project. Run the command to create a README.md, LICENSE, .gitignore, .gitattributes, and .editorconfig with a one-line command.
