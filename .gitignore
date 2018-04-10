@@ -1,9 +1,12 @@
+# Created by https://github.com/drihu/poketask
+
 # Github gitignore templates
 gitignore
 
 # Github license templates
 choosealicense.com
 
+# Node.gitignore
 # Logs
 logs
 *.log
@@ -42,7 +45,7 @@ build/Release
 node_modules/
 jspm_packages/
 
-# Typescript v1 declaration files
+# TypeScript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -65,3 +68,10 @@ typings/
 
 # next.js build output
 .next
+
+# VisualStudioCode.gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
