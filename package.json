@@ -26,6 +26,7 @@
   "author": "Ricardo Huamani <ricardohuamanip@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.3.2",
     "commander": "^2.15.1",
     "ejs": "^2.5.7",
     "inquirer": "^5.2.0"
