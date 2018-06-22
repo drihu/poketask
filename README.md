@@ -30,6 +30,9 @@ If you just want to get the gitignore file, it will then create a single .gitign
 ```bash
 poketask gi
 ```
+```bash
+? gitignore templates: node laravel visualstudiocode
+```
 The project uses the github gitignore templates and also accepts multiple gitignores.
 
 The list of gitignore templates can be found [here](https://github.com/github/gitignore). And the list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
