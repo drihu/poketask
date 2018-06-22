@@ -38,7 +38,7 @@ The project uses the github gitignore templates and also accepts multiple gitign
 The list of gitignore templates can be found [here](https://github.com/github/gitignore).
 
 ### Command li (License)
-If you just want to get the LICENSE file. Use the nex command.
+If you just want to get the LICENSE file. Use the next command.
 ```bash
 poketask li
 ```
