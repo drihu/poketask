@@ -26,7 +26,7 @@ Example
 ```
 
 ### Command gi
-If you just want to get the gitignore file, it will then create a single .gitignore.
+If you just want to get the gitignore file, it will then create a single .gitignore. You need to specify the gitignore templates.
 ```bash
 poketask gi
 ```
