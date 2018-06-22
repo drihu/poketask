@@ -25,7 +25,7 @@ Example
 ? gitignore templates: node laravel visualstudiocode
 ```
 
-### Command gi
+### Command gi (Gitignore)
 If you just want to get the gitignore file, it will then create a single .gitignore. You need to specify the gitignore templates.
 ```bash
 poketask gi
@@ -35,7 +35,18 @@ poketask gi
 ```
 The project uses the github gitignore templates and also accepts multiple gitignores.
 
-The list of gitignore templates can be found [here](https://github.com/github/gitignore). And the list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
+The list of gitignore templates can be found [here](https://github.com/github/gitignore).
+
+### Command li (License)
+If you just want to get the LICENSE file. Use the nex command.
+```bash
+poketask li
+```
+```bash
+? author name: Pablo Marmol
+? license: mit
+```
+The list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
 
 ## License
 Copyright &copy; 2018 Ricardo Huamani
