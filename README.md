@@ -22,7 +22,7 @@ It is recommended to execute the command after *npm init* in your project's root
 poketask init
 ```
 
-Example
+Example:
 
 ```bash
 ? package name: my-package
@@ -35,6 +35,8 @@ Example
 ### Command gi (Gitignore)
 
 If you just want to get the gitignore file, it will then create a single .gitignore. You need to specify the gitignore templates.
+
+Example:
 
 ```bash
 poketask gi node laravel visualstudiocode
@@ -51,6 +53,8 @@ If you just want to get the LICENSE file. Use the next command.
 ```bash
 poketask li
 ```
+
+Example:
 
 ```bash
 ? author name: Pablo Marmol
