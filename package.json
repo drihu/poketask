@@ -1,6 +1,6 @@
 {
   "name": "poketask",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Create a .gitignore with a one-line command.",
   "bin": {
     "poketask": "./lib/poketask.js"
