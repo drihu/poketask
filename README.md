@@ -25,26 +25,56 @@ poketask init
 Example:
 
 ```bash
+$ poketask init
+With poketask you'll be able to generate the following files:
+README.md, LICENSE, .gitignore, .gitattributes & .editorconfig
+
+Press ^C at any time to quit.
 ? package name: my-package
 ? description: description here
 ? author name: Pablo Marmol
 ? license: mit
 ? gitignore templates: node laravel visualstudiocode
+--
+.editorconfig created
+.gitattributes created
+.gitignore created with VisualStudioCode.gitignore, Node.gitignore, Laravel.gitignore
+LICENSE created under MIT
+README.md created
 ```
 
 ### Command gi (Gitignore)
 
 If you just want to get the gitignore file, it will then create a single .gitignore. You need to specify the gitignore templates.
 
+```bash
+poketask gi <template> <template> ...
+```
+
 Example:
 
 ```bash
-poketask gi node laravel visualstudiocode
+$ poketask gi node laravel visualstudiocode
+.gitignore created with VisualStudioCode.gitignore, Node.gitignore, Laravel.gitignore
 ```
 
 The project uses the github gitignore templates and also accepts multiple gitignores.
 
 The list of gitignore templates can be found [here](https://github.com/github/gitignore).
+
+### Command ga (Gitattributes)
+If you just want to get the gitattributes file, it will then create a single .gitattributes.
+
+```bash
+poketask ga
+```
+
+Example:
+
+```bash
+$ poketask ga
+.gitattributes created
+```
 
 ### Command li (License)
 
@@ -57,8 +87,11 @@ poketask li
 Example:
 
 ```bash
+$ poketask li
 ? author name: Pablo Marmol
 ? license: mit
+--
+LICENSE created under MIT
 ```
 
 The list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
