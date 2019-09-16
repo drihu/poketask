@@ -6,6 +6,9 @@ gitignore
 # Github license templates
 choosealicense.com
 
+# Test folder
+test
+
 # Node.gitignore
 # Logs
 logs
