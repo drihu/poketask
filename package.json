@@ -26,14 +26,14 @@
   "author": "Ricardo Huamani <ricardohuamanip@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^2.3.2",
-    "commander": "^2.15.1",
-    "ejs": "^2.5.7",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "ejs": "^2.7.1",
     "inquirer": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0"
+    "eslint-plugin-import": "^2.18.2"
   }
 }
