@@ -2,7 +2,7 @@
 
 [![license](https://img.shields.io/badge/license-MIT-green.svg)]()
 
-> A simple command to start any project. Run the command to create a README.md, LICENSE, .gitignore, .gitattributes, and .editorconfig with a one-line command.
+> A simple command to start any project. Run the command to create a .gitignore, .gitattributes, .editorconfig, README.md and a LICENSE with a one-line command.
 
 Currently, it is compatible with Node >= 8.0.0
 
@@ -95,6 +95,9 @@ LICENSE created under MIT
 ```
 
 The list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
+
+## Thanks
+Thanks to [LYCrachel](https://github.com/LYCrachel) and [bradleylandis](https://github.com/bradleylandis) for the improvements.
 
 ## License
 
