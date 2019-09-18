@@ -1,6 +1,6 @@
 # Poketask
 
-[![license](https://img.shields.io/badge/license-MIT-green.svg)]()
+![license](https://img.shields.io/badge/license-MIT-green.svg)
 
 > A simple command to start any project. Run the command to create a .gitignore, .gitattributes, .editorconfig, README.md and a LICENSE with a one-line command.
 
@@ -63,6 +63,7 @@ The project uses the github gitignore templates and also accepts multiple gitign
 The list of gitignore templates can be found [here](https://github.com/github/gitignore).
 
 ### Command ga (Gitattributes)
+
 If you just want to get the gitattributes file, it will then create a single .gitattributes.
 
 ```bash
@@ -97,6 +98,7 @@ LICENSE created under MIT
 The list of license templates is [here](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses).
 
 ## Thanks
+
 Thanks to [LYCrachel](https://github.com/LYCrachel) and [bradleylandis](https://github.com/bradleylandis) for the improvements.
 
 ## License
