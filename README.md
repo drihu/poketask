@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg)
 
-> A simple command to start any project. Run the command to create a .gitignore, .gitattributes, .editorconfig, README.md and a LICENSE with a one-line command.
+> A simple command to start any project. Run the command to generate a .gitignore, .gitattributes, .editorconfig, README.md and a LICENSE with a one-line command.
 
 Currently, it is compatible with Node >= 8.0.0
 
@@ -16,7 +16,7 @@ npm install -g poketask
 
 ### Command init
 
-It is recommended to execute the command after *npm init* in your project's root folder. It will then create a README.md, LICENSE, .gitignore, .gitattributes and .editorconfig.
+It is recommended to execute the command after *npm init* in your project's root folder. It will then generate a README.md, LICENSE, .gitignore, .gitattributes and .editorconfig.
 
 ```bash
 poketask init
