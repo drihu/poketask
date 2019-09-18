@@ -77,6 +77,21 @@ $ poketask ga
 .gitattributes created
 ```
 
+### Command ed (Editorconfig)
+
+If you just want to get the editorconfig file, it will then create a single .editorconfig.
+
+```bash
+poketask ed
+```
+
+Example:
+
+```bash
+$ poketask ed
+.editorconfig created
+```
+
 ### Command li (License)
 
 If you just want to get the LICENSE file. Use the next command.
