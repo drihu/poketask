@@ -12,10 +12,13 @@ trim_trailing_whitespace = true
 [*.{php,py}]
 indent_size = 4
 
-[{.eslintrc.json,composer.json}]
+[.vscode/*]
 indent_size = 4
 
-[Makefile, makefile]
+[{.eslintrc.json,composer.json,Pipfile.lock}]
+indent_size = 4
+
+[{Makefile,makefile}]
 indent_style = tab
 tab_width = 4
 
