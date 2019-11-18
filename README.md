@@ -1,6 +1,7 @@
 # Poketask
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg)
+![node](https://img.shields.io/badge/node-8.0.0-blue)
 
 > A simple command to start any project. Run the command to generate a .gitignore, .gitattributes, .editorconfig, README.md and a LICENSE with a one-line command.
 
@@ -26,7 +27,7 @@ Example:
 
 ```bash
 $ poketask init
-With poketask you'll be able to generate the following files:
+With poketask you`ll be able to generate the following files:
 README.md, LICENSE, .gitignore, .gitattributes & .editorconfig
 
 Press ^C at any time to quit.
